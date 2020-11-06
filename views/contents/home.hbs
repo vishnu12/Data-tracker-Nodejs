@@ -1,0 +1,61 @@
+
+
+<main>
+    <div class="row">
+        <div class="col s6">
+             <table class="striped centered table-section">
+        <thead>
+          <tr style="background-color: green;color:white">
+              <th>State</th>
+              <th>Tested</th>
+              <th>Confirmed</th>
+              <th>Recovered</th>
+              <th>Deceased</th>
+              <th>Test Positivity</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {{#each data}}
+       <tr>
+            <td>{{this.state}}</td>
+            <td>{{this.tested}}</td>
+            <td>{{this.confirmed}}</td>
+            <td>{{this.recovered}}</td>
+            <td>{{this.deceased}}</td>
+            <td>{{this.positivity}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+        </div>
+        <div class="col s1">
+
+        </div>
+        <div class="col s4"> 
+          <h3 style="text-align: center;">Confirmed Cases</h3>
+    <div class="row chart-row">
+      <canvas id="myChart" width="100" height="100"></canvas> 
+    </div>
+
+    <h3 style="text-align: center;">Recovery</h3>
+    <div class="row chart-row">
+      <canvas id="myChart2" width="100" height="100"></canvas> 
+    </div>
+
+    <h3 style="text-align: center;">Test Positivity</h3>
+    <div class="row chart-row">
+      <canvas id="myChart3" width="100" height="100"></canvas> 
+    </div>
+        </div>
+       
+    </div>
+</main>
+
+<script>
+  addPiechartConfirm()
+  addPiechartRecover()
+  addPiechartPositive()
+</script>
+
+
